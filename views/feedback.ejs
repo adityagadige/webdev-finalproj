@@ -1,0 +1,75 @@
+<!-- include() ejs partials to resue the same html -->
+<%- include("header") -%>
+<header>
+  <h1 class="center head-large">Feedback Form</h1>
+</header>
+<article class="feedback-article">
+  <section id="feedback-section">
+    <div class="form-frame">
+      <form action="/feedback" method="post">
+        <div class="form-group">
+          <label for="first">First Name:</label>
+          <input type="text" name="firstName" id="first" class="form-element inp" placeholder="Enter your First Name" autofocus required>
+        </div>
+        <div class="form-group">
+          <label for="last">Last Name:</label>
+          <input type="text" name="lastName" id="last" class="form-element inp" placeholder="Enter your Last Name" required>
+        </div>
+        <div class="form-group">
+          <label for="address">Address:</label>
+          <textarea rows="5" cols="40" name="address" id="address" class="input-1 form-element inp" required></textarea>
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone:</label>
+          <input type="text" name="phone" id="phone" pattern="\([0-9]{3}\) [0-9]{3}-[0-9]{4}" maxlength="14" placeholder="(123) 456-7890" class="input-2 form-element inp" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" name="email" id="email" pattern="^\w+([\.-_]?\w+)*@\w+([\.-_]?\w+)*(\.[a-z]{2,4})+$" placeholder="Enter your Email" class="input-3 form-element inp" required>
+        </div>
+        <div class="form-group">
+          <label>Gender:</label>
+          <div class="radio-group">
+            <label class="fw-normal"><input type="radio" name="gender" value="male" required>Male</label>
+            <label class="fw-normal"><input type="radio" name="gender" value="female">Female</label>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="comments">Comments:</label>
+          <textarea rows="5" cols="40" name="comments" id="comments" class="input-4 form-element inp" required></textarea>
+        </div>
+        <div class="form-group">
+          <label for="rating">Rating:</label>
+          <select name="rating" id="rating" class="input-5 form-element inp" required>
+            <option value="">Select a rating</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <input type="submit" value="submit" id="submit" class="button" onclick="validate(this.form);">
+          <input type="reset" value="reset" id="reset" class="button">
+        </div>
+        <div class="errors">
+          <ul class="feedback-ul">
+            <li class="first-li"></li>
+            <li class="last-li"></li>
+            <li class="address-li"></li>
+            <li class="phone-li"></li>
+            <li class="email-li"></li>
+            <li class="comments-li"></li>
+            <li class="rating-li"></li>
+          </ul>
+        </div>
+        <div class="message">
+          <p class="error-msg"><%= error_msg %></p>
+        </div>
+      </form>
+    </div>
+  </section>
+</article>
+
+<%- include("footer") -%>

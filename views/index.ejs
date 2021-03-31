@@ -1,0 +1,122 @@
+<!-- include() ejs partials to resue the same html -->
+<%- include("header") -%>
+  <article>
+
+    <!-- Profile Section -->
+    <section id="profile-section">
+      <header>
+        <h1 class="center head-large">Aditya's Home Page</h1>
+      </header>
+
+      <!-- The circular profiles images is obtained by changing the border-radius css property of image. -->
+      <figure>
+        <img src="images/profile1.jpeg" alt="profile image not found" class="profile-img" title="Aditya Gadige">
+      </figure>
+      <div class="about-me">
+        <h3>About Me</h3>
+        <p class="justify">
+          I am Aditya. My friends call me <span>'Adi'</span>. I am from <strong>Hyderabad</strong>, which is in the southern part of <strong>India</strong>. I am pursuing my Master's in
+          Computer Science at <mark>Southern Illinois University Carbondale</mark>. I did my undergrad from <abbr title="Jawaharlal Nehru Technological University Hyderabad">JNTUH</abbr> in
+          Computer Science and Engineering and secured 78%. I am currently working as <abbr title="Graduate Assistant">GA</abbr> at SalukiTech. My interest in computers started at
+          a young age. I am a tech enthusiastic and a movie buff. I <em>love</em> &ltcoding&gt and learning new stuff every day. I <em>love</em> icecreams and cooking new dishes.
+        </p><br>
+        <p class="gameText">Check out the Shape Transformation Game. &nbsp; <input type="button" id="play" class="button" value="Play" onclick="showGame();"></p>
+        <canvas id="gameCanvas" height="600" width="1100" onclick="captureClick(event);">
+          Sorry! This game uses <code>canvas</code> and your browser doesn't support it.
+        </canvas>
+        <div id="gameButtons">
+          <!-- Restart and Quit buttons appear when user clicks on Play.-->
+          <input type="button" class="button" value="Restart" onclick="clearCanvas();">
+          <input type="button" class="button" value="Quit" onclick="hideGame();">
+        </div>
+      </div>
+    </section>
+
+    <!-- Mottos Section -->
+    <section id="motto-section">
+      <h1 class="center head-large">My favourite Mottos</h1>
+      <p class="center">
+        <q cite="https://stupidgyan.com/dreams-are-not-what-you-see-in-sleep-kalam/">Dream is not that you see in sleep, dream is something that does not let you sleep</q><br>
+        <q cite="https://www.pinterest.com/pin/851180398301513113/">Never be a prisoner of your past. It was just a lesson, not a life sentence.</q><br>
+        <q cite="https://www.brainyquote.com/quotes/a_p_j_abdul_kalam_717796">If you want to shine lika a sun, first burn like a sun.</q>
+        <aside>
+          <pre class="small-text">
+				These quotes are by my idol <span><abbr title="Avul Pakir Jainulabdeen">A. P. J.</abbr> Abdul Kalam</span>.
+				The last one inspires me the most.
+				</pre>
+        </aside>
+      </p>
+    </section>
+    <hr>
+
+    <!-- Photos Section -->
+    <section id="photo-section">
+      <!--Rearranged photo list using presetation layout through css.-->
+      <div class="table">
+        <div class="caption">My Photo List</div>
+        <div class="row">
+          <!-- The hyperlinks are opened in the new tabs by specifying target attritbute as "_blank" -->
+          <a href="https://siu.edu/" target="_blank"><img src="./images/pic1.jpeg" alt="siuc image" title="Southern Illinois University Carbondale" height="230" width="300" class="photo-list"></a>
+          <a href="https://en.wikipedia.org/wiki/Carbondale,_Illinois" target="_blank"><img src="./images/pic2.jpeg" alt="carbondale image" title="Carbondale Illinois" height="230" width="300" class="photo-list"></a>
+          <a href="https://trip101.com/article/best-things-to-do-chennai-india" target="_blank"><img src="./images/pic3.jpeg" alt="trip image" title="My trip to Chennai, India" height="230" width="300" class="photo-list"></a>
+          <a href="https://www.choosechicago.com/" target="_blank"><img src="./images/pic4.jpeg" alt="chicago image" title="Chicago, Illinois" height="230" width="300" class="photo-list"></a>
+        </div>
+        <div class="row">
+          <span>Southern Illinois University Carbondale</span>
+          <span>Carbondale Illinois</span>
+          <span>My trip to Chennai, India</span>
+          <span>Chicago, Illinois</span>
+        </div>
+        <div class="row">
+          <a href="https://www.japan-guide.com/e/e2164.html" target="_blank"><img src="./images/tokyo.jpg" alt="tokyo image" height="230" width="300" class="photo-list"></a>
+          <a href="https://www.miamiandbeaches.com/" target="_blank"><img src="./images/miami.jpg" alt="miami image" height="230" width="300" class="photo-list"></a>
+          <a href="https://www.nycgo.com/" target="_blank"><img src="./images/new-york.jpg" alt="new york image" height="230" width="300" class="photo-list"></a>
+          <a href="https://www.discoverlosangeles.com/" target="_blank"><img src="./images/los-angeles.jpg" alt="los angeles image" height="230" width="300" class="photo-list"></a>
+        </div>
+        <div class="row">
+          <span>Tokyo, Japan</span>
+          <span>Miami, Florida</span>
+          <span>New York, NY</span>
+          <span>Los Angeles, California</span>
+        </div>
+      </div>
+    </section>
+    <hr>
+
+    <!--Educational Qualification Section-->
+    <section id="education-section">
+      <h1 class="center head-large">Educational Qualification</h1>
+      <table>
+        <tr class="ed-heading">
+          <th>Educational Qualification</th>
+          <th>University</th>
+          <th>Year</th>
+          <th>Percentage/GPA</th>
+        </tr>
+        <tr class="ed-row">
+          <td>Masters in Computer Science</td>
+          <td>Southern Illinois University, Carbondale</td>
+          <td>2020 - Present</td>
+          <td>4.0 GPA</td>
+        </tr>
+        <tr class="ed-row">
+          <td><abbr title="Bachelor of Technology">B.Tech</abbr> in <abbr title="Computer Science & Engineering">CSE</abbr></td>
+          <td>Jawaharlal Nehru Technological University, Hyderabad</td>
+          <td>2015 - 2019</td>
+          <td>78.44 %</td>
+        </tr>
+      </table>
+    </section>
+    <hr>
+    <!-- Hobbies Section -->
+    <section id="hobbies-section">
+      <h1 class="center head-large">My Hobbies</h1>
+      <ul>
+        <li>I love Badminton and Table Tennis.</li>
+        <li>I love exploring and cookign new dishes.</li>
+        <li>I love reading books, gaming and watching movies.</li>
+      </ul>
+    </section>
+  </article>
+
+  <%- include("footer") -%>

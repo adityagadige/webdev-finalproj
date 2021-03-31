@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="author" content="Aditya Gadige">
+<meta name="description" content="Aditya's Portfolio">
+<meta name="keywords" content="aditya's profile,aditya's home page,siuc,aditya gadige, more about aditya, aditya details, Aditya's music, fav music, Aditya's audio">
+
+<!-- Google fonts https://fonts.google.com/ -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans&family=PT+Serif&family=Ubuntu:wght@500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./css/audio-style.css">
+<!-- favicon to style title bar icon-->
+ <link rel="icon" href="./images/favicon.ico">
+<title> My audio</title>
+</head>
+<body>
+<nav class="nav-link">
+	<a href="/"><button type="button" class="button">Home</button></a>
+	<a href="/aboutme"><button type="button" class="button">More about me</button></a>
+	<a href="/feedback"><button type="button" class="button">Feedback form</button></a>
+</nav>
+<header>
+	<h1>My current fav songs</h1>
+</header>
+<!--all popular audio formats are not included to reduce overall file size-->
+<article>
+	<!--Aduio Section-->
+	<section id="audio-section">
+		<div class="audio-class">
+			<h3>Maguva Maguva</h3>
+			<audio autoplay controls>
+				<source src="./audio/maguva.mp3" type="audio/mpeg">
+			</audio>
+		</div>
+		<div class="audio-class">
+			<h3>Photo Song</h3>
+			<audio preload="auto" controls>
+				<source src="./audio/photo-song.mp3" type="audio/mpeg">
+			</audio>
+		</div>
+		<div class="audio-class">
+			<h3>Memories</h3>
+			<audio preload="auto" controls>
+				<source src="./audio/memories.mp3" type="audio/mpeg">
+			</audio>
+		</div>
+	</section>
+</article>
+<!-- include() ejs partials to resue the same html -->
+<%- include("footer") -%>

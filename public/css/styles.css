@@ -1,0 +1,334 @@
+/*Type selectors*/
+body {
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+}
+
+h1 {
+  font-family: 'PT Serif', serif;
+}
+
+h3 {
+  font-family: 'Montserrat', sans-serif;
+}
+
+q {
+  font-family: 'Ubuntu', sans-serif;
+  line-height: 2;
+  font-size: 1.5em;
+}
+
+hr {
+  border-top: 6px dotted lightgrey;
+  width: 5%;
+  margin: 8% auto;
+}
+
+span {
+  font-style: italic;
+}
+
+nav {
+  margin-left: 2%;
+}
+
+ul {
+  list-style-type: circle;
+  font-size: 115%;
+}
+
+footer {
+  margin-top: 5%;
+  padding: 5%;
+  background-color: #ddf3f5;
+  padding: 5%;
+}
+
+table {
+  margin: 0 auto;
+}
+
+table, th, td {
+  border: none;
+}
+
+th, td {
+  padding: 1em;
+}
+
+td {
+  background-color: #9bdeac;
+  text-align: center;
+}
+
+label {
+  margin-right: 4rem;
+  font-weight: 600;
+}
+
+canvas {
+  display: none;
+  border: 0;
+  background-color: #f5f5f5;
+}
+
+/*Apply same css styles to multiple elements*/
+.nav-link, #multimedia, #profile-section, header {
+  background-color: #ddf3f5;
+}
+
+/*Id selectors*/
+#motto-section {
+  margin-top: 5%;
+}
+
+#gameButtons {
+  display: none;
+}
+
+/*Class selectors*/
+.nav-link {
+  margin: 0;
+  padding: 1% 1% 0 0;
+  text-align: right;
+}
+
+.button {
+  background-color: #008CBA;
+  border: 1px solid transparent;
+  border-color: #008CBA;
+  color: white;
+  padding: 1em 1em;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15px;
+  border-radius: 12px;
+  margin: 0 4px;
+}
+
+.gameText {
+  font-style: italic;
+  font-weight: 700;
+}
+
+.head-large {
+  font-size: 2em;
+}
+
+.center {
+  text-align: center;
+}
+
+.profile-img {
+  width: 15%;
+  border-radius: 100%;
+  float: left;
+  margin-top: 2%;
+}
+
+.small-text {
+  font-family: 'PT Serif', serif;
+  font-weight: 200;
+}
+
+.justify {
+  text-align: justify;
+}
+
+.about-me {
+  margin-left: 15%;
+  padding: 4%;
+}
+
+.footer-link {
+  padding: 0.5rem;
+}
+
+.table {
+  display: table;
+  border-spacing: 20px;
+}
+
+.caption {
+  display: table-caption;
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  font-family: 'PT Serif', serif;
+}
+
+.row {
+  display: table-row;
+}
+
+.row1 {
+  display: inline-block;
+}
+
+.photo-list {
+  padding: 8%;
+}
+
+.vid {
+  display: inline-block;
+  margin: 2% 10%;
+  border: 5px solid white;
+}
+
+.form-frame {
+  padding: 2rem;
+  margin: 4rem;
+  background-color: #f5f5f5;
+  border-radius: 0.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+.feedback-article {
+  margin-top: 4.5rem;
+}
+
+.feedback-ul {
+  list-style: none;
+}
+
+.input-1 {
+  margin-left: 1.2rem;
+}
+
+.input-2 {
+  margin-left: 1.9rem;
+}
+
+.input-3 {
+  margin-left: 2.3rem;
+}
+
+.input-4 {
+  margin-left: -0.4rem;
+}
+
+.input-5 {
+  margin-left: 1.7rem;
+}
+
+.radio-group {
+  margin-left: 1.5rem;
+}
+
+.fw-normal {
+  font-weight: normal;
+}
+
+.form-element {
+  padding: 0.5rem 1rem;
+  border-radius: 0.4rem;
+  border: 1px solid transparent;
+}
+
+.success-msg {
+  color: green;
+}
+
+.error-msg {
+  color: red;
+}
+
+/*Apply the style to all children of .row class*/
+.row>* {
+  display: table-cell;
+  text-align: center;
+}
+
+.feedback-ul>* {
+  color: red;
+}
+
+/*css media query
+errors class is applied when broser window is 1100px wide or more.
+*/
+@media (min-width: 1100px) {
+  .errors {
+    position: relative;
+    left: 40rem;
+    bottom: 35rem;
+  }
+
+  .message {
+    position: relative;
+    left: 35rem;
+    bottom: 9rem;
+  }
+}
+
+/*Child selector*/
+#motto-section>aside {
+  float: right;
+  margin-right: 2%;
+}
+
+header>h1 {
+  margin: 0;
+  line-height: 2em;
+}
+
+#multimedia>h1 {
+  margin: 0;
+  font-size: 1.5rem;
+  padding: 1em;
+  text-align: left;
+}
+
+/*Descendant Selectors*/
+.vid p {
+  font-weight: bold;
+  text-align: center;
+}
+
+.audio-link h1 {
+  margin: 1em;
+  padding: 1%;
+}
+
+.sch-thead th {
+  background-color: #111d5e;
+  color: white;
+  vertical-align: bottom;
+}
+
+.sch-tbody th {
+  background-color: #07031a;
+  color: white;
+}
+
+.ed-heading th {
+  background-color: #f4f6ff;
+}
+
+.ed-row td {
+  background-color: #9bdeac;
+}
+
+/*Pseudo elements*/
+.button:hover {
+  background-color: white;
+  color: black;
+}
+
+.inp:focus:invalid {
+  background-color: rgb(255, 220, 220);
+}
+
+.inp:focus:valid {
+  background-color: lightgreen;
+}
+
+/*Group Selectors*/
+input.button {
+  margin: 1rem 1rem 1rem 0;
+}

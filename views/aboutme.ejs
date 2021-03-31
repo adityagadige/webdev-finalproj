@@ -1,0 +1,62 @@
+<!-- include() ejs partials to resue the same html -->
+<%- include("header") -%>
+<article>
+	<header>
+		<h1 class="center head-large">About Me</h1>
+	</header>
+	<!--Multimedia Section - includes video elements-->
+	<section id="multimedia">
+		<h1 class="center head-large">Check out my favourie music and videos</h1>
+		<div class="videos">
+			<div class="vid">
+			<!--All popular video formats are not included to reduce overall file size-->
+			<video width="400" height="225" preload="metadata" controls>
+			<source src="./videos/tenet.mp4" type="video/mp4">
+			</video>
+			<p>Movie I am excited about.</p>
+			</div>
+			<div class="vid">
+			<iframe src="https://www.youtube.com/embed/DyX-QZZBgpw" width="400" height="225" allowfullscreen></iframe><br>
+			<p>A video of my favourie tech youtuber.</p>
+			</div>
+		<div>
+		<div class="audio-link">
+		<h1> ♫♪♫♪ &nbsp; To listen my current on-repeat songs <mark><a href="/audios">click here</a></mark>.</h1>
+		</div>
+	</section>
+	<hr>
+	<!--My Schedule Section-->
+	<section id="schedule">
+		<h1 class="center head-large">My Schedule</h1>
+		<table>
+			<thead class="sch-thead">
+				<tr>
+					<th>Weekday</th>
+					<th>8:00 AM - 1:00 PM</th>
+					<th>1:00 PM - 2:00 PM</th>
+					<th>2:00 PM - 5:00 PM</th>
+					<th>5:00 PM - 8:00 PM</th>
+				</tr>
+			</thead>
+			<tbody class="sch-tbody">
+				<tr>
+					<th>Monday</th><td rowspan="4">Work hours</td><td rowspan="5" style="background-color: #fbd46d;">Lunch break</td><td rowspan="4">Web App Dev Course Work</td><td rowspan="4">Basic Linux Admin Course Work</td>
+				</tr>
+				<tr>
+					<th>Tuesday</th>
+				</tr>
+				<tr>
+					<th>Wednesday</th>
+				</tr>
+				<tr>
+					<th>Thursday</th>
+				</tr>
+				<tr>
+					<th>Friday</th><td>Baisc Linux Admin Course Work</td><td colspan="2">Web App Dev Course Work</td>
+				</tr>
+			</tbody>
+		</table>
+	</section>
+</article>
+
+<%- include("footer") -%>

@@ -1,0 +1,13 @@
+<!-- include() ejs partials to resue the same html -->
+<%- include("header") -%>
+<article>
+  <section id="feedback-resonpse">
+    <header>
+    <h1 class="center head-large">Thank You!</h1>
+    </header>
+    <div class="form-frame">
+    <p><%= fb_msg %></p>
+    </div>
+  </section>
+</article>
+  <%- include("footer") -%>

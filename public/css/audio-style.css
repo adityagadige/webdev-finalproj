@@ -1,0 +1,47 @@
+body{
+	background-image: url(../images/bc1.jpg);
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: center;
+	font-family: 'Caveat', cursive;
+}
+.center{
+	text-align:center;
+}
+
+h1{
+	font-size: 2.5em;
+}
+
+.button {
+    background-color: #008CBA ;
+    border: 1px solid transparent;
+	border-color: #008CBA;
+    color: white;
+    padding: 1em 1em;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+	border-radius: 12px;
+	margin: 0 4px;
+}
+
+.nav-link{
+	margin: 0;
+	padding: 1% 1% 0 0;
+	text-align: right;
+}
+
+.button:hover{
+	background-color: white;
+	color: black;
+}
+audio{
+	display: block;
+}
+
+.audio-class{
+	margin: 2%;
+	padding: 2%;
+}
